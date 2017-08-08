@@ -1,0 +1,37 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "es6": true
+  },
+  "rules": {
+    "semi": [1, "always"],   /* 要求不能写分号，设置成 always 表示总是要写分号，2表示按错误进行提示，1表示提示警告*/
+    "no-console": 0,      /* 禁止使用 console，级别 0 表示不提示*/
+    "comma-dangle": [1, "always-multiline"],  /* 强制在对象和数组字面量中使用一致的拖尾逗号*/
+    "max-len": 0,     /* 强制一行的最大长度，0 表示不提示，即忽略该属性*/
+    "react/jsx-first-prop-new-line": 0,
+    "space-before-function-paren": [2, "always"],   /* 强制在 function的左括号之前使用一致的空格*/
+    "no-unused-expressions": [0, {    /* 禁止出现未使用过的表达式*/
+      "allowShortCircuit": true,    /* allowShortCircuit 设置为 true 将允许你在表达式中使用逻辑短路求值。（默认为 false）*/
+      "allowTernary": true    /* allowTernary 设置为 true 将允许你在表达式中使用类似逻辑短路求值的三元运算符。（默认为 false）*/
+    }],
+    "arrow-body-style": [0, "never"],   /* 要求箭头函数体使用大括号，0 表示不做要求*/
+    "func-names": 0,    /* 要求或禁止使用命名的 function 表达式*/
+    "prefer-const": 0,    /* 要求使用 const 声明那些声明后不再被修改的变量*/
+    "no-extend-native": 0,    /* 禁止扩展原生类型*/
+    "no-param-reassign": 0,   /* 禁止对 function 的参数进行重新赋值*/
+    "no-restricted-syntax": 0,    /* 禁用特定的语法*/
+    "no-eval": 0,     /* 禁用 eval()*/
+    "react/jsx-no-bind": 0,
+    "no-unused-vars": [2, { "ignoreRestSiblings": true }],  /* 禁止出现未使用过的变量*/
+    "no-underscore-dangle": 0,    /* 禁止标识符中有悬空下划线*/
+    "global-require": 0   /* 要求 require() 出现在顶层模块作用域中*/
+  },
+  "parserOptions": {    /* 允许指定校验的 ECMA 的版本，及 ECMA 的一些特性*/
+    "sourceType": "module",   /* 指定来源的类型，有两种”script”或”module”*/
+    "ecmaVersion": 6,   /* 指定ECMAScript支持的版本，6为ES6*/
+    "ecmaFeatures": {
+      "jsx": true,    /* 启动JSX*/
+      "experimentalObjectRestSpread": true     /* 可以使用 ... 语法*/
+    }
+  }
+}
