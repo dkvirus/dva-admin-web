@@ -1,1 +1,1 @@
-{"menus":[{"id":"system","name":"开发工具模块","icon":"setting","authorities":[]},{"id":"system-menu","name":"菜单管理","bpid":"system","mpid":"system","icon":"bars","router":"/system/menu","authorities":[]}]}
+{"menus":[{"id":"system","name":"开发工具模块","icon":"setting","authorities":[]},{"id":"system-menu","name":"菜单管理","bpid":"system","mpid":"system","icon":"bars","router":"/system/menu","authorities":[]},{"id":"system-example","name":"示例模块","icon":"bars","authorities":[],"mpid":"system","bpid":"system","router":"/system/example"}]}

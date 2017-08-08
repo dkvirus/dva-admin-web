@@ -19,7 +19,7 @@ let database = [
 module.exports = {
 
     // 增
-    [`POST ${apiPrefix}{{router}}`] (req, res) {
+    [`POST ${apiPrefix}/system/example`] (req, res) {
         const newData = req.body;
 
         newData.id = Mock.mock('@id');
@@ -29,7 +29,7 @@ module.exports = {
     },
 
     // 删
-    [`DELETE ${apiPrefix}{{router}}/:id`] (req, res) {
+    [`DELETE ${apiPrefix}/system/example/:id`] (req, res) {
         const { id } = req.params;
 
         database = database.filter(item => String(item.id) !== id)
@@ -38,7 +38,7 @@ module.exports = {
     },
 
     // 改
-    [`PATCH ${apiPrefix}{{router}}/:id`] (req, res) {
+    [`PATCH ${apiPrefix}/system/example/:id`] (req, res) {
         const { id } = req.params
         const editItem = req.body
         let isExist = false
@@ -59,7 +59,7 @@ module.exports = {
     },
 
     // 查
-    [`GET ${apiPrefix}{{router}}`] (req, res) {
+    [`GET ${apiPrefix}/system/example`] (req, res) {
         res.status(200).json({ code: '0000', data: {content: database} })
     },
 
