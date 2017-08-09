@@ -73,7 +73,7 @@ export default {
         const data = yield call(login, payload);
         yield put({ type: 'hideLoginLoading' });
 
-        if (data.code === '0000') {
+        if (data.success) {
             const from = queryURL('from');
             yield put({ type: 'query' });
             if (from) {
@@ -89,7 +89,7 @@ export default {
     // 用户注销，清空 cookie 信息
     * logout ({ payload }, { call, put }) {
       const data = yield call(logout, parse(payload));
-      if (data.code === '0000') {
+      if (data.success) {
         yield put({ type: 'query' });
       } else {
         throw (data);
